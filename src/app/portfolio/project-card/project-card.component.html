@@ -1,0 +1,63 @@
+<!-- Card 3: Enhanced -->
+
+<div class="w-full ml-6">
+  <div
+    class="bg-gradient-to-r from-purple-500 to-red-500 text-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+  >
+    <div class="p-4 text-center">
+      <h5 class="text-2xl font-bold mb-4">
+        {{ project.name }}
+      </h5>
+      <p class="text-white mb-6">{{ project.summary }}.</p>
+      <button
+        class="bg-white text-purple-600 py-2 px-4 rounded-full shadow hover:bg-gray-200 transition-colors"
+        (click)="openProjectModal()"
+      >
+        View More
+      </button>
+    </div>
+    <div class="py-4">
+      <div class="flex justify-center space-x-4">
+        <div *ngFor="let tag of project.tags">
+          <div
+            class="bg-opacity-50 px-2 py-1 rounded-full text-sm text-white-400"
+            [style.background-color]="tag.color"
+          >
+            {{ tag }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="w-full ml-6">
+  <div
+    class="bg-gray-200 text-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+  >
+    <div class="p-4 text-center text-gray-600">
+      <h5 class="text-2xl font-bold mb-4">
+        {{ project.name }}
+      </h5>
+      <p class="mb-6">{{ project.summary }}.</p>
+      <button
+        class="bg-white text-gray-600 py-2 px-4 rounded-full shadow hover:bg-gray-200 transition-colors"
+        (click)="openProjectModal()"
+      >
+        View More
+      </button>
+    </div>
+    <div class="py-4">
+      <div class="flex justify-center space-x-4 text-gray-600">
+        <div *ngFor="let tag of project.tags">
+          <div
+            class="px-2 py-1 rounded-full text-sm text-white"
+            [style.background-color]="tag.color"
+          >
+            {{ tag }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

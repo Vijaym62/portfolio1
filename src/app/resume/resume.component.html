@@ -1,0 +1,202 @@
+<div class="container text-center mt-10">
+  <button (click)="DownloadFile()" class="btn btn-primary mb-2 shadow border">
+    Download Resume PDF
+  </button>
+
+  <div class="accordion-container px-10">
+    <!-- Work Experience Section -->
+    <div
+      class="accordion-item my-4 border border-gray-300 rounded-lg overflow-hidden shadow-md"
+    >
+      <button
+        class="accordion-header bg-gray-300 text-gray-800 p-4 w-full text-center font-semibold"
+        (click)="toggleAccordion('workExperience')"
+      >
+        Work Experience
+        <div class="inline-block ml-2">
+          <span *ngIf="openAccordion !== 'workExperience'">+</span>
+          <span *ngIf="openAccordion === 'workExperience'">-</span>
+        </div>
+      </button>
+      <div
+        *ngIf="openAccordion === 'workExperience'"
+        class="accordion-body p-4 bg-gray-100 text-gray-700"
+      >
+        <h2 class="text-lg font-semibold mb-2 text-center">
+          Company : Absolute Software
+        </h2>
+        <ul class="list-disc list-inside text-center">
+          <!-- <li>6 Month Internship</li> -->
+          <li>Internship Trainee Developer</li>
+          <!-- <li>Job Title 2</li>
+          <li>Job Title 3</li> -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div
+      class="accordion-item my-4 border border-gray-300 rounded-lg overflow-hidden shadow-md"
+    >
+      <button
+        class="accordion-header bg-gray-300 text-gray-800 p-4 w-full text-center font-semibold"
+        (click)="toggleAccordion('education')"
+      >
+        Education
+        <div class="inline-block ml-2">
+          <span *ngIf="openAccordion !== 'education'">+</span>
+          <span *ngIf="openAccordion === 'education'">-</span>
+        </div>
+      </button>
+      <div
+        *ngIf="openAccordion === 'education'"
+        class="accordion-body p-4 bg-gray-100 text-gray-700"
+      >
+        <h2 class="text-lg font-semibold mb-2 text-center"></h2>
+        <ul class="list-disc list-inside text-center font-semibold">
+          <li class="mt-4">
+            G.H.Raisoni Collage of Engg.& Buisness Management Jalgaon
+            <p class="font-semibold">(Mca)</p>
+          </li>
+
+          <li class="mt-4">
+            Arts,Commerce & Science Collage Bodwad
+            <p class="font-semibold">(B.Sc,Computer Science)</p>
+          </li>
+          <li class="mt-4">
+            N.H.Ranka Highschool and Jr.Collage Bodwad
+            <p>(12th Std)</p>
+          </li>
+          <li class="mt-4">
+            Rashtriya Madhyamik Vidyalaya Bodwad
+            <p>(10th Std)</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Certifications Section -->
+    <div
+      class="accordion-item my-4 border border-gray-300 rounded-lg overflow-hidden shadow-md"
+    >
+      <button
+        class="accordion-header bg-gray-300 text-gray-800 p-4 w-full text-center font-semibold"
+        (click)="toggleAccordion('certifications')"
+      >
+        Certifications
+        <div class="inline-block ml-2">
+          <span *ngIf="openAccordion !== 'certifications'">+</span>
+          <span *ngIf="openAccordion === 'certifications'">-</span>
+        </div>
+      </button>
+      <div
+        *ngIf="openAccordion === 'certifications'"
+        class="accordion-body p-4 bg-gray-100 text-gray-700"
+      >
+        <h2 class="text-lg font-semibold mb-2 text-center">
+          Content for Certifications.
+        </h2>
+        <ul class="list-disc list-inside text-center">
+          <li>
+            Udemy
+            <p>Angular full course</p>
+          </li>
+          <li class="mt-4">
+            Udemy
+            <p>.Net web core full course</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div
+      class="accordion-item my-4 border border-gray-300 rounded-lg overflow-hidden shadow-md"
+    >
+      <button
+        class="accordion-header bg-gray-300 text-gray-800 p-4 w-full text-center font-semibold"
+        (click)="toggleAccordion('skills')"
+      >
+        Skills
+        <div class="inline-block ml-2">
+          <span *ngIf="openAccordion !== 'skills'">+</span>
+          <span *ngIf="openAccordion === 'skills'">-</span>
+        </div>
+      </button>
+      <div
+        *ngIf="openAccordion === 'skills'"
+        class="accordion-body p-4 bg-gray-100 text-gray-700"
+      >
+        <h2 class="text-lg font-semibold mb-2 text-center">
+          Technology,Skills,Languages
+        </h2>
+        <ul class="list-disc list-inside text-center">
+          <li class="mt-4">
+            Programming Languages: HTML, CSS, JavaScript, TypeScript, Node.js,
+          </li>
+          <li class="mt-4">
+            Web Technologies:Angular, Express.js, Tailwind CSS, Angular Material
+          </li>
+          <li class="mt-4">
+            Database Systems:MongoDB, JSON (for in-memory storage), RESTful APIs
+          </li>
+          <li class="mt-4">Frontend Framework:Angular17, Angular CLI</li>
+          <li class="mt-4">Backend Technologies: Node.js, Express.js</li>
+          <li class="mt-4">Version Control: GitHub</li>
+          <li class="mt-4">API Testing Tools:Postman</li>
+          <li class="mt-4">
+            UI/UX Design:Responsive Web Design,Tailwind Css, Angular Material
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="accordion-container">
+  <div class="accordion-item" [(isOpen)]="isWorkExperianceOpen">
+    <button
+      class="accordion-header bg-gray-200 text-gray-800 p-4 w-full text-center"
+      (click)="toggleWorkExperience()"
+    >
+      Work Experiance
+      <div *ngIf="!isWorkExperianceOpen">></div>
+      <div *ngIf="isWorkExperianceOpen">v</div>
+    </button>
+    <div class="accordion-body p-4 bg-gray-100">
+      <h2 class="text-center">Content for section 1.</h2>
+      <h3 class="text-center">contetsection3 ahe</h3>
+      <ul class="text-center">
+        <li>target ponujsbcashbch</li>
+        <li>target ponujsbcashbch</li>
+        <li>target ponujsbcashbch</li>
+        <li>target ponujsbcashbch</li>
+        <li>target ponujsbcashbch</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button
+      class="accordion-header bg-gray-200 text-gray-800 p-4 w-full text-center"
+    >
+      Education
+    </button>
+   
+  </div>
+  <div class="accordion-item">
+    <button
+      class="accordion-header bg-gray-200 text-gray-800 p-4 w-full text-center"
+    >
+      Certifications
+    </button>
+  
+  </div>
+  <div class="accordion-item">
+    <button
+      class="accordion-header bg-gray-200 text-gray-800 p-4 w-full text-center"
+    >
+      Skills
+    </button>
+   
+</div> -->
+</div>

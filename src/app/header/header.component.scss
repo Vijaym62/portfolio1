@@ -1,0 +1,18 @@
+
+.logo-link {
+    display: inline-block; /* Ensure logos are aligned side by side */
+     /* Adjust spacing between logos */
+  }
+  
+  .logo-img {
+    background-color: transparent; /* Ensure logo background is transparent */
+    border: none; /* Remove any borders if present */
+    display: block; /* Remove any extra space around the image */
+  }
+  
+  /* Optional: Add hover effects */
+  .logo-img:hover {
+    opacity: 0.8; /* Slightly fade logo on hover */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+  }
+  

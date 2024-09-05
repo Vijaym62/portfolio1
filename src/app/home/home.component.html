@@ -1,0 +1,140 @@
+<div class="container flex justify-between mx-2/4 gap-2">
+  <!-- About Me -->
+  <div class="w-2/4 p-4 shadow border flex flex-col bg-gray-100">
+    <div class="text-center flex-grow">
+      <h2 class="text-xl font-semibold">About Me</h2>
+      <div class="flex justify-center mt-4">
+        <img
+          src="./assets/vijay99.jpg"
+          alt="profile picture"
+          class="w-64 h-64 object-cover object-center rounded-full border-4 border-white shadow-lg"
+        />
+      </div>
+      <p class="mt-6">
+        Hello, I'm Vijay Mali, a passionate Frontend Angular web developer
+        skilled in Angular and Node.js. I enjoy creating responsive and
+        efficient applications, with a focus on clean code and user-friendly
+        designs. I'm always eager to learn and take on new challenges in the
+        world of web development.
+      </p>
+    </div>
+  </div>
+
+  <!-- Featured Project -->
+  <div class="w-2/4 p-4 shadow border flex flex-col bg-gray-100">
+    <div class="text-center flex-grow">
+      <h2 class="text-xl font-semibold">Inside</h2>
+      <h4 class="mt-2 font-medium">{{ featuredProject.name }}</h4>
+    </div>
+    <!-- ///////////// -->
+    <!-- <carousel class="mt-4">
+      <div *ngFor="let picture of featuredProject.pictures">
+        <slide>
+          <img
+            src="{{ picture }}"
+            alt="slide"
+            class="w-full h-full object-cover"
+          />
+        </slide>
+      </div>
+    </carousel> -->
+    <!-- /////////////////// -->
+    <!-- Portfolio Flexbox -->
+    <div class="mt-4 flex overflow-x-auto space-x-4 pb-4">
+      <div
+        *ngFor="let picture of featuredProject.pictures"
+        class="flex-shrink-0 w-full"
+      >
+        <div class="relative overflow-hidden">
+          <img
+            [src]="picture"
+            alt="slide"
+            class="w-full h-full object-cover transition-transform transform"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- ///////////// -->
+
+    <!-- <div class="relative overflow-hidden w-full mt-4">
+    
+      <div
+        class="flex transition-transform duration-500 ease-in-out"
+        [ngStyle]="{ transform: 'translateX(-' + currentSlide * 100 + '%)' }"
+      >
+        <div
+          *ngFor="let picture of featuredProject.pictures"
+          class="flex-shrink-0 w-full"
+        >
+          <img
+            src="{{ picture }}"
+            alt="slide"
+            class="w-full h-64 object-cover"
+          />
+        </div>
+      </div>
+
+   
+      <button
+        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+      >
+        &#10094;
+      </button>
+      <button
+        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+      >
+        &#10095;
+      </button>
+    </div> -->
+
+    <!-- ////////////// -->
+    <p class="mt-4">{{ featuredProject.summary }}</p>
+  </div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<!-- <div class="container flex justify-between">
+  
+  <div class="w-2/4 p-2 shadow border flex flex-col bg-gray-100">
+    <div class="text-center flex-grow">
+      <h2 class="text-xl font-semibold">About Me</h2>
+
+      <div class="flex justify-center mt-2">
+        <img
+          src="./assets/vijay1.img.jpg"
+          alt="profile picture"
+          class="w-64 h-64 object object-center rounded-full border-4 border-white shadow-lg"
+        />
+      </div>
+
+      <p class="mt-4">
+        Hello, I'm Vijay Mali, a passionate Frontend Angular web developer
+        skilled in Angular and Node.js. I enjoy creating responsive and
+        efficient applications, with a focus on clean code and user-friendly
+        designs, I'm always eager to learn and take on new challenges in the
+        world of web development.
+      </p>
+    </div> 
+  </div>-->
+<!-- Featured Project -->
+<!-- <div class="w-2/4 p-4 shadow border m-1 flex flex-col bg-gray-100">
+    <div class="text-center flex-grow">
+      <h2 class="text-xl font-semibold">Featured Project</h2>
+      <h4>{{ featuredProject.name }}</h4>
+    </div>
+    <carousel>
+      <div *ngFor="let picture of featuredProject.pictures">
+        <slide
+          ><img
+            src="{{ picture }}"
+            alt="slide"
+            style="display: block; width: 100%"
+        /></slide>
+      </div>
+    </carousel>
+    <p class="mt-2">{{ featuredProject.summary }}</p>
+    <p>in working</p>
+  </div>
+</div> -->
